@@ -1,0 +1,7 @@
+04-05-2018 11:45:49- Metodo:Autorizacion : System.Threading.Tasks.TaskCanceledException: Se canceló una tarea.
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en WebApiLogistica.Controllers.LoginController.<Autorizacion>d__0.MoveNext() en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Controllers\LoginController.cs:línea 35
+04-05-2018 12:47:53- Metodo:Autorizacion : System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en WebApiLogistica.Controllers.LoginController.<Autorizacion>d__0.MoveNext() en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Controllers\LoginController.cs:línea 37

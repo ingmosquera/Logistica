@@ -1,0 +1,18 @@
+03-05-2018 06:45:51- Metodo:Autorizacion : System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en WebApiLogistica.Data.Repositorio.Implementacion.LoginRepositorio.DatosUsuario(String usuario, String contrasena) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Data\Repositorio\Implementacion\LoginRepositorio.cs:línea 22
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Controllers\LoginController.cs:línea 18
+03-05-2018 06:47:06- Metodo:Autorizacion : System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en WebApiLogistica.Data.Repositorio.Implementacion.LoginRepositorio.DatosUsuario(String usuario, String contrasena) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Data\Repositorio\Implementacion\LoginRepositorio.cs:línea 22
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Controllers\LoginController.cs:línea 18
+03-05-2018 06:48:39- Metodo:Autorizacion : System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en WebApiLogistica.Data.Repositorio.Implementacion.LoginRepositorio.DatosUsuario(String usuario, String contrasena) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Data\Repositorio\Implementacion\LoginRepositorio.cs:línea 22
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Controllers\LoginController.cs:línea 18
+03-05-2018 06:53:31- Metodo:Autorizacion : System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en WebApiLogistica.Data.Repositorio.Implementacion.LoginRepositorio.DatosUsuario(String usuario, String contrasena)
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login)
+03-05-2018 06:53:39- Metodo:Autorizacion : System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en WebApiLogistica.Data.Repositorio.Implementacion.LoginRepositorio.DatosUsuario(String usuario, String contrasena)
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login)
+03-05-2018 06:54:06- Metodo:Autorizacion : System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en WebApiLogistica.Data.Repositorio.Implementacion.LoginRepositorio.DatosUsuario(String usuario, String contrasena)
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login)

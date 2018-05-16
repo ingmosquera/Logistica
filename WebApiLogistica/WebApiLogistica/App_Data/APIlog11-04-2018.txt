@@ -1,0 +1,247 @@
+11-04-2018 11:37:12- Procedure :dbo.spValidoLogin @Login,@Password : System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en WebApiLogistica.Data.Repositorio.Implementacion.Repositorio`1.SelectModelWithParameters(String sql, Object[] param) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Data\Repositorio\Implementacion\Repositorio.cs:línea 67
+11-04-2018 11:37:19- Metodo:Autorizacion : System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en WebApiLogistica.Data.Repositorio.Implementacion.Repositorio`1.SelectModelWithParameters(String sql, Object[] param) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Data\Repositorio\Implementacion\Repositorio.cs:línea 72
+   en WebApiLogistica.Data.Repositorio.Implementacion.LoginRepositorio.DatosUsuario(String usuario, String contrasena) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Data\Repositorio\Implementacion\LoginRepositorio.cs:línea 24
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Controllers\LoginController.cs:línea 25
+11-04-2018 12:42:45- Procedure :dbo.spValidoLogin @Login,@Password : System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en WebApiLogistica.Data.Repositorio.Implementacion.Repositorio`1.SelectModelWithParameters(String sql, Object[] param) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Data\Repositorio\Implementacion\Repositorio.cs:línea 68
+11-04-2018 12:42:50- Metodo:Autorizacion : System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en WebApiLogistica.Data.Repositorio.Implementacion.Repositorio`1.SelectModelWithParameters(String sql, Object[] param) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Data\Repositorio\Implementacion\Repositorio.cs:línea 73
+   en WebApiLogistica.Data.Repositorio.Implementacion.LoginRepositorio.DatosUsuario(String usuario, String contrasena) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Data\Repositorio\Implementacion\LoginRepositorio.cs:línea 24
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Controllers\LoginController.cs:línea 34
+11-04-2018 01:48:33- Metodo:Autorizacion : AutoMapper.AutoMapperConfigurationException: 
+Unmapped members were found. Review the types and members below.
+Add a custom mapping expression, ignore, add a custom resolver, or modify the source/destination type
+For no matching constructor, add a no-arg ctor, add optional arguments, or map all of the constructor parameters
+==========================================================================================================================================================================================================================
+DbRawSqlQuery`1 -> UsuarioModel (Destination member list)
+System.Data.Entity.Infrastructure.DbRawSqlQuery`1[[WebApiLogistica.Data.Repositorio.Entity.UsuarioEntity, WebApiLogistica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> WebApiLogistica.Models.UsuarioModel (Destination member list)
+
+Unmapped properties:
+Id
+Login
+Nombre
+Apellido
+IdEstado
+DescEstado
+Identificacion
+FechaIngreso
+
+   en AutoMapper.ConfigurationValidator.AssertConfigurationIsValid(IEnumerable`1 typeMaps)
+   en AutoMapper.MapperConfiguration.AssertConfigurationIsValid(TypeMap typeMap)
+   en lambda_method(Closure , DbRawSqlQuery`1 , UsuarioModel , ResolutionContext )
+   en lambda_method(Closure , Object , Object , ResolutionContext )
+   en AutoMapper.Mapper.AutoMapper.IMapper.Map[TDestination](Object source)
+   en AutoMapper.Mapper.Map[TDestination](Object source)
+   en WebApiLogistica.Data.Repositorio.Implementacion.LoginRepositorio.DatosUsuario(String usuario, String contrasena) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Data\Repositorio\Implementacion\LoginRepositorio.cs:línea 26
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Controllers\LoginController.cs:línea 31
+11-04-2018 03:37:31- Metodo:Autorizacion : System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'dbo.spValidoL'.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   en System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   en System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__64()
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__63()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en WebApiLogistica.Data.Repositorio.Implementacion.LoginRepositorio.DatosUsuario(String usuario, String contrasena)
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login)
+ClientConnectionId:06d0fa93-baf2-44b0-bb7f-9dddd0550ae5
+Error Number:2812,State:62,Class:16
+11-04-2018 04:40:49- Metodo:Autorizacion : System.ArgumentException: Otro SqlParameterCollection ya contiene SqlParameter.
+   en System.Data.SqlClient.SqlParameterCollection.Validate(Int32 index, Object value)
+   en System.Data.SqlClient.SqlParameterCollection.AddRange(Array values)
+   en System.Data.Entity.Core.Objects.ObjectContext.CreateStoreCommand(String commandText, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__64()
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__63()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en WebApiLogistica.Data.Repositorio.Implementacion.LoginRepositorio.DatosUsuario(String usuario, String contrasena)
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login)
+11-04-2018 04:41:55- Metodo:Autorizacion : System.ArgumentException: Otro SqlParameterCollection ya contiene SqlParameter.
+   en System.Data.SqlClient.SqlParameterCollection.Validate(Int32 index, Object value)
+   en System.Data.SqlClient.SqlParameterCollection.AddRange(Array values)
+   en System.Data.Entity.Core.Objects.ObjectContext.CreateStoreCommand(String commandText, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__64()
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__63()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en WebApiLogistica.Data.Repositorio.Implementacion.LoginRepositorio.DatosUsuario(String usuario, String contrasena)
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login)
+11-04-2018 04:43:07- Metodo:Autorizacion : System.ArgumentException: Otro SqlParameterCollection ya contiene SqlParameter.
+   en System.Data.SqlClient.SqlParameterCollection.Validate(Int32 index, Object value)
+   en System.Data.SqlClient.SqlParameterCollection.AddRange(Array values)
+   en System.Data.Entity.Core.Objects.ObjectContext.CreateStoreCommand(String commandText, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__64()
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__63()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en WebApiLogistica.Data.Repositorio.Implementacion.LoginRepositorio.DatosUsuario(String usuario, String contrasena)
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login)
+11-04-2018 04:44:02- Metodo:Autorizacion : System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: source
+   en System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   en WebApiLogistica.Data.Repositorio.Implementacion.LoginRepositorio.DatosUsuario(String usuario, String contrasena)
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login)
+11-04-2018 04:51:46- Metodo:Autorizacion : System.ArgumentException: Otro SqlParameterCollection ya contiene SqlParameter.
+   en System.Data.SqlClient.SqlParameterCollection.Validate(Int32 index, Object value)
+   en System.Data.SqlClient.SqlParameterCollection.AddRange(Array values)
+   en System.Data.Entity.Core.Objects.ObjectContext.CreateStoreCommand(String commandText, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__64()
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__63()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en WebApiLogistica.Data.Repositorio.Implementacion.LoginRepositorio.DatosUsuario(String usuario, String contrasena)
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login)
+11-04-2018 04:52:52- Metodo:Autorizacion : System.ArgumentException: Otro SqlParameterCollection ya contiene SqlParameter.
+   en System.Data.SqlClient.SqlParameterCollection.Validate(Int32 index, Object value)
+   en System.Data.SqlClient.SqlParameterCollection.AddRange(Array values)
+   en System.Data.Entity.Core.Objects.ObjectContext.CreateStoreCommand(String commandText, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__64()
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__63()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en WebApiLogistica.Data.Repositorio.Implementacion.LoginRepositorio.DatosUsuario(String usuario, String contrasena)
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login)
+11-04-2018 05:25:19- Metodo:Autorizacion : System.NotImplementedException: No se puede implementar el método o la operación.
+   en WebApiLogistica.Data.Repositorio.Implementacion.LoginRepositorio.WebApiLogistica.Data.Repositorio.Interface.ILoginRepositorio.DatosUsuario(String usuario, String contrasena)
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login)
+11-04-2018 05:25:24- Metodo:Autorizacion : System.NotImplementedException: No se puede implementar el método o la operación.
+   en WebApiLogistica.Data.Repositorio.Implementacion.LoginRepositorio.WebApiLogistica.Data.Repositorio.Interface.ILoginRepositorio.DatosUsuario(String usuario, String contrasena)
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login)
+11-04-2018 06:03:18- Procedure :dbo.spValidoLogin @Login,@Password : System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@Login".
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   en System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   en System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__64()
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__63()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en WebApiLogistica.Data.Repositorio.Implementacion.Repositorio`1.ExecWithStoreProcedure(String sql, Object[] param) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Data\Repositorio\Implementacion\Repositorio.cs:línea 63
+ClientConnectionId:03fd4cc4-4013-48e7-bbcc-a79de0fd2e70
+Error Number:137,State:2,Class:15
+11-04-2018 06:23:00- Procedure :spValidoLogin @Login,@Password : System.InvalidOperationException: The cast to value type 'System.DateTime' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type.
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   en lambda_method(Closure , Shaper )
+   en System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en WebApiLogistica.Data.Repositorio.Implementacion.Repositorio`1.ExecWithStoreProcedure(String sql, Object[] param) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Data\Repositorio\Implementacion\Repositorio.cs:línea 63
+11-04-2018 06:28:42- Metodo:Autorizacion : System.NotImplementedException: No se puede implementar el método o la operación.
+   en WebApiLogistica.Data.Repositorio.Implementacion.LoginRepositorio.WebApiLogistica.Data.Repositorio.Interface.ILoginRepositorio.DatosUsuario(String usuario, String contrasena) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Data\Repositorio\Implementacion\LoginRepositorio.cs:línea 56
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Controllers\LoginController.cs:línea 37
+11-04-2018 06:43:33- Metodo:Autorizacion : System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login)
+11-04-2018 07:24:18- Metodo:Autorizacion : System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@Login nvarchar(4000),@Password nvarchar(4000))EXEC spValidoLog' expects the parameter '@Login', which was not supplied.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   en System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   en System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__64()
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__63()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   en WebApiLogistica.Controllers.LoginController.Autorizacion(LoginModel login) en D:\TAPIRUS\Proyectos\Logistica\WebApiLogistica\WebApiLogistica\Controllers\LoginController.cs:línea 33
+ClientConnectionId:580b8682-1cd7-4281-9111-1193ab215e53
+Error Number:8178,State:1,Class:16
